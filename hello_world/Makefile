@@ -1,14 +1,11 @@
 BIN := _bin/app
 
-.PHONY: all run build
+.PHONY: default clean
 
-all: build run
-
-build:
-	mix escript.build
-
-run:
+default: $(BIN)
 	$(BIN)
+$(BIN):
+	mix escript.build
 
 clean:
 	rm -rf _bin _build
