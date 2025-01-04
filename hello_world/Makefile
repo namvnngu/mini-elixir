@@ -4,8 +4,11 @@ BIN := _bin/app
 
 all: build run
 
-build: $(BIN)
+build:
 	mix escript.build
 
 run:
 	$(BIN)
+
+clean:
+	rm -rf _bin _build
